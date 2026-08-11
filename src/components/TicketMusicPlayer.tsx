@@ -72,7 +72,7 @@ export const TicketMusicPlayer: React.FC = () => {
     seekTo(targetSeconds);
   };
 
-  const showSkeleton = !trackTitle && isLoadingTrack;
+  const showSkeleton = isLoadingTrack || !trackTitle;
 
   return (
     <div className="busfi-wrapper">

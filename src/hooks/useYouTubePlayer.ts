@@ -251,19 +251,27 @@ export function useYouTubePlayer(playlistId: string): UseYouTubePlayerReturn {
     if (playerRef.current && playerRef.current.nextVideo) {
       setIsLoadingTrack(true);
       setTrackTitle('');
+      setTrackArtist('');
       setCurrentTime(0);
       playerRef.current.nextVideo();
+      setTimeout(() => {
+        updateTrackInfo();
+      }, 600);
     }
-  }, []);
+  }, [updateTrackInfo]);
 
   const prevTrack = useCallback(() => {
     if (playerRef.current && playerRef.current.previousVideo) {
       setIsLoadingTrack(true);
       setTrackTitle('');
+      setTrackArtist('');
       setCurrentTime(0);
       playerRef.current.previousVideo();
+      setTimeout(() => {
+        updateTrackInfo();
+      }, 600);
     }
-  }, []);
+  }, [updateTrackInfo]);
 
   const seekTo = useCallback((seconds: number) => {
     if (playerRef.current && playerRef.current.seekTo) {
