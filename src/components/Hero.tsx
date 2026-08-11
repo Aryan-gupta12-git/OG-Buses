@@ -9,18 +9,20 @@ export const Hero: React.FC = () => {
     <main className="hero-container">
       {/* Desktop Background Image */}
       <img
-        src="/assets/a0617161-8592-4391-93d7-38623afdcbc1.png"
+        src="/assets/hero-desktop.webp"
         alt="Rajasthan Roadways Deluxe Bus Desktop"
         className="hero-image hero-image-desktop"
         loading="eager"
+        fetchPriority="high"
         decoding="sync"
       />
       {/* Mobile Background Image */}
       <img
-        src="/assets/5b46517d-9f13-47cf-bf86-aec416946328.png"
+        src="/assets/hero-mobile.webp"
         alt="Rajasthan Roadways Deluxe Bus Mobile"
         className="hero-image hero-image-mobile"
         loading="eager"
+        fetchPriority="high"
         decoding="sync"
       />
 

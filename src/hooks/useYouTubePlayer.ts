@@ -175,7 +175,6 @@ export function useYouTubePlayer(playlistId: string): UseYouTubePlayerReturn {
             setIsLoadingTrack(false);
           } else if (state === YTState.BUFFERING) {
             setIsBuffering(true);
-            setIsLoadingTrack(true);
           } else if (state === YTState.ENDED) {
             setIsBuffering(false);
           }
@@ -246,6 +245,7 @@ export function useYouTubePlayer(playlistId: string): UseYouTubePlayerReturn {
   const nextTrack = useCallback(() => {
     if (playerRef.current && playerRef.current.nextVideo) {
       setIsLoadingTrack(true);
+      setTrackTitle('');
       setCurrentTime(0);
       playerRef.current.nextVideo();
     }
@@ -254,6 +254,7 @@ export function useYouTubePlayer(playlistId: string): UseYouTubePlayerReturn {
   const prevTrack = useCallback(() => {
     if (playerRef.current && playerRef.current.previousVideo) {
       setIsLoadingTrack(true);
+      setTrackTitle('');
       setCurrentTime(0);
       playerRef.current.previousVideo();
     }
