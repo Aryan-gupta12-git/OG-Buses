@@ -1,18 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <!-- Golden Yellow Background -->
-  <rect width="512" height="512" fill="#F4C414" />
+  <rect width="512" height="512" fill="#F4C414" rx="96" />
   
-  <!-- Top Accents: Circle & Tilted Square -->
   <g fill="#FFFFFF">
-    <circle cx="348" cy="142" r="20" />
-    <rect x="376" y="142" width="26" height="26" rx="2" transform="rotate(22 389 155)" />
-  </g>
+    <!-- Top Accents above 'स': Circle and Tilted Square -->
+    <circle cx="350" cy="136" r="22" />
+    <rect x="388" y="136" width="28" height="28" rx="3" transform="rotate(25 402 150)" />
 
-  <!-- Devanagari Typography "बसें" -->
-  <text x="256" y="345" 
-        font-family="'Rozha One', 'Yatra One', 'Noto Serif Devanagari', 'Arial Unicode MS', 'Kohinoor Devanagari', sans-serif" 
-        font-weight="900" 
-        font-size="256" 
-        fill="#FFFFFF" 
-        text-anchor="middle">बसें</text>
+    <!-- Shirorekha (Top Horizontal Bar) -->
+    <rect x="84" y="184" width="344" height="32" rx="4" />
+
+    <!-- Letter 'ब' (Ba) Loop -->
+    <path d="M 96 232 C 96 208, 176 208, 176 232 L 176 312 C 176 336, 96 336, 96 312 Z M 124 240 C 124 228, 148 228, 148 240 L 148 304 C 148 316, 124 316, 124 304 Z" />
+    <!-- Diagonal Slash inside 'ब' -->
+    <line x1="124" y1="244" x2="148" y2="300" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" />
+    <!-- Right stem of 'ब' -->
+    <rect x="188" y="216" width="32" height="180" rx="4" />
+
+    <!-- Letter 'स' (Sa) Outer Shape -->
+    <path d="M 264 232 C 264 212, 328 212, 328 244 C 328 268, 296 284, 272 312 L 272 396 L 304 396 L 304 340 C 324 316, 360 298, 360 244 C 360 188, 264 188, 264 232 Z" />
+    <!-- Middle connecting bar for 'स' -->
+    <rect x="296" y="300" width="44" height="28" rx="4" />
+    <!-- Right stem of 'स' -->
+    <rect x="332" y="216" width="32" height="180" rx="4" />
+  </g>
 </svg>
