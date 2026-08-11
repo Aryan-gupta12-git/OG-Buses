@@ -81,6 +81,7 @@ export function useYouTubePlayer(playlistId: string): UseYouTubePlayerReturn {
 
           if (!cleanTitle) cleanTitle = rawTitle;
           setTrackTitle(cleanTitle);
+          setIsLoadingTrack(false);
 
           const artist = cleanArtistName(rawAuthor, rawTitle);
           setTrackArtist(artist);
@@ -169,7 +170,11 @@ export function useYouTubePlayer(playlistId: string): UseYouTubePlayerReturn {
             setIsBuffering(false);
             setIsLoadingTrack(false);
             setIsUnavailable(false);
-          } else if (state === YTState.PAUSED) {
+          } else if (
+            state === YTState.PAUSED ||
+            state === YTState.CUED ||
+            state === YTState.UNSTARTED
+          ) {
             setIsPlaying(false);
             setIsBuffering(false);
             setIsLoadingTrack(false);
