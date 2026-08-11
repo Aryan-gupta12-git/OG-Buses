@@ -168,9 +168,9 @@ export const TicketMusicPlayer: React.FC = () => {
               type="button"
               title="Play/Pause (Space)"
             >
-              {isBuffering || isLoadingTrack
+              {isLoadingTrack && !trackTitle
                 ? 'LOADING...'
-                : isPlaying
+                : isPlaying || isBuffering
                 ? 'PAUSE'
                 : 'PLAY'}
             </button>
